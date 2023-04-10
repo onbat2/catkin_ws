@@ -1,2 +1,8 @@
-****10/04/2023
+10/04/2023
+*Problem
+  -(QLoginWidget) Phần Login khi bấm connect không tự tắt
+*Target
+  -(QLoginWidget) Tinh chỉnh lại phần Login
+*Process
 
+ 
