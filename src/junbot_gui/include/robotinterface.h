@@ -4,6 +4,12 @@
 #include <QMainWindow>
 #include <sensor_msgs/BatteryState.h>
 
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QTimer>
+#include <QTreeWidgetItem>
+#include <QPushButton>
+
 #include "QRobotUltis.h"
 #include "QRobotItem.h"
 #include "QJoyStick.h"
@@ -25,33 +31,45 @@ public:
   void writeSettings();  // Save qt program settings when closing
 
   void initUis();
-  void initVideos();
-  void initTopicList();
-  void initOthers();
-  bool connectMaster(QString master_ip, QString ros_ip, bool use_envirment = false);
+//  void initVideos();
+//  void initTopicList();
+//  void initOthers();
+//  bool connectMaster(QString master_ip, QString ros_ip, bool use_envirment = false);
 
-public slots:
-  /******************************************
-     ** Auto-connections (connectSlotsByName())
-     *******************************************/
-  void on_actionAbout_triggered();
-  void slot_batteryState(sensor_msgs::BatteryState);
-  void slot_rosShutdown();
-  void refreshTopicList();
-  void slot_cmd_control();
+//public slots:
+//  /******************************************
+//     ** Auto-connections (connectSlotsByName())
+//     *******************************************/
+//  void on_actionAbout_triggered();
+//  void slot_batteryState(sensor_msgs::BatteryState);
+//  void slot_rosShutdown();
+//  void refreshTopicList();
+//  void slot_cmd_control();
 
-private:
-  void mousePressEvent(QMouseEvent *event);
-  void mouseMoveEvent(QMouseEvent *event);
-  void mouseReleaseEvent(QMouseEvent *event);
-  void connections();
-  void display_rviz();
+//private:
+//  void mousePressEvent(QMouseEvent *event);
+//  void mouseMoveEvent(QMouseEvent *event);
+//  void mouseReleaseEvent(QMouseEvent *event);
+//  void connections();
+//  void display_rviz();
 
 private:
   Ui::RobotInterface *ui;
-  bool isPressedWidget;
-  QPoint m_lastPos;
+//  bool isPressedWidget;
+//  QPoint m_lastPos;
   QNode m_qnode;
+
+//  QStandardItemModel *treeView_rviz_model = nullptr;
+
+//  // Store the address of the control currently displayed
+//  // by the rviz treewidget and the parent of the control
+//  QMap<QWidget *, QTreeWidgetItem *> widget_to_parentItem_map;
+
+//  // Store the corresponding relationship of the status bar display name status item
+//  QMap<QString, QTreeWidgetItem *> tree_rviz_stues;
+
+//  // Store the current value of display item name, parameter name and value
+//  QMap<QTreeWidgetItem *, QMap<QString, QString>> tree_rviz_values;
 
   bool m_useEnviorment = false;
   bool m_autoConnect = false;
@@ -61,6 +79,9 @@ private:
   double m_turnLightThre = 0.1;
   QGraphicsScene *m_qgraphicsScene = nullptr;
   QRobotItem *m_roboItem = nullptr;
+//  QVariantList m_sendVelList, m_recvVelList, m_timeList;
+
+//  int line_max = 10;
 
   QTimer *m_timerChart;
   QTimer *m_timerPubImageMap;

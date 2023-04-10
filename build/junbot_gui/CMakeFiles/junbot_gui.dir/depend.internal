@@ -4718,6 +4718,7 @@ CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
@@ -4731,10 +4732,15 @@ CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeWidgetItem
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
@@ -4753,10 +4759,18 @@ CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreeview.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreewidget.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtreewidgetitemiterator.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h

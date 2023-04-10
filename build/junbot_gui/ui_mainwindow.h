@@ -1019,7 +1019,7 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(action_Quit, SIGNAL(triggered()), MainWindow, SLOT(close()));
 
-        stackedWidget_left->setCurrentIndex(2);
+        stackedWidget_left->setCurrentIndex(1);
         stackedWidget_main->setCurrentIndex(0);
 
 

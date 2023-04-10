@@ -1,8 +1,9 @@
 10/04/2023
 *Problem
-  -(QLoginWidget) Phần Login khi bấm connect không tự tắt
+  -(QLoginWidget) Phần Login khi bấm connect không tự tắt (Done)
 *Target
   -(QLoginWidget) Tinh chỉnh lại phần Login
+  - Code lại phần robotinterface
 *Process
 
  
