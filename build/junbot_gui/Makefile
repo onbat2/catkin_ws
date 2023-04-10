@@ -1151,33 +1151,6 @@ src/QRobotItem.cpp.s:
 	$(MAKE) -f CMakeFiles/junbot_gui.dir/build.make CMakeFiles/junbot_gui.dir/src/QRobotItem.cpp.s
 .PHONY : src/QRobotItem.cpp.s
 
-src/m_window.o: src/m_window.cpp.o
-
-.PHONY : src/m_window.o
-
-# target to build an object file
-src/m_window.cpp.o:
-	$(MAKE) -f CMakeFiles/junbot_gui.dir/build.make CMakeFiles/junbot_gui.dir/src/m_window.cpp.o
-.PHONY : src/m_window.cpp.o
-
-src/m_window.i: src/m_window.cpp.i
-
-.PHONY : src/m_window.i
-
-# target to preprocess a source file
-src/m_window.cpp.i:
-	$(MAKE) -f CMakeFiles/junbot_gui.dir/build.make CMakeFiles/junbot_gui.dir/src/m_window.cpp.i
-.PHONY : src/m_window.cpp.i
-
-src/m_window.s: src/m_window.cpp.s
-
-.PHONY : src/m_window.s
-
-# target to generate assembly for a file
-src/m_window.cpp.s:
-	$(MAKE) -f CMakeFiles/junbot_gui.dir/build.make CMakeFiles/junbot_gui.dir/src/m_window.cpp.s
-.PHONY : src/m_window.cpp.s
-
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -1356,9 +1329,6 @@ help:
 	@echo "... src/QRobotItem.o"
 	@echo "... src/QRobotItem.i"
 	@echo "... src/QRobotItem.s"
-	@echo "... src/m_window.o"
-	@echo "... src/m_window.i"
-	@echo "... src/m_window.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

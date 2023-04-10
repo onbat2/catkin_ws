@@ -342,22 +342,9 @@ CMakeFiles/junbot_gui.dir/src/QRobotItem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/junbot_gui.dir/src/QRobotItem.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/onbat2/catkin_ws/src/junbot_gui/src/QRobotItem.cpp -o CMakeFiles/junbot_gui.dir/src/QRobotItem.cpp.s
 
-CMakeFiles/junbot_gui.dir/src/m_window.cpp.o: CMakeFiles/junbot_gui.dir/flags.make
-CMakeFiles/junbot_gui.dir/src/m_window.cpp.o: /home/onbat2/catkin_ws/src/junbot_gui/src/m_window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/junbot_gui.dir/src/m_window.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/junbot_gui.dir/src/m_window.cpp.o -c /home/onbat2/catkin_ws/src/junbot_gui/src/m_window.cpp
-
-CMakeFiles/junbot_gui.dir/src/m_window.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/junbot_gui.dir/src/m_window.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/onbat2/catkin_ws/src/junbot_gui/src/m_window.cpp > CMakeFiles/junbot_gui.dir/src/m_window.cpp.i
-
-CMakeFiles/junbot_gui.dir/src/m_window.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/junbot_gui.dir/src/m_window.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/onbat2/catkin_ws/src/junbot_gui/src/m_window.cpp -o CMakeFiles/junbot_gui.dir/src/m_window.cpp.s
-
 CMakeFiles/junbot_gui.dir/src/main.cpp.o: CMakeFiles/junbot_gui.dir/flags.make
 CMakeFiles/junbot_gui.dir/src/main.cpp.o: /home/onbat2/catkin_ws/src/junbot_gui/src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/junbot_gui.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/junbot_gui.dir/src/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/junbot_gui.dir/src/main.cpp.o -c /home/onbat2/catkin_ws/src/junbot_gui/src/main.cpp
 
 CMakeFiles/junbot_gui.dir/src/main.cpp.i: cmake_force
@@ -370,7 +357,7 @@ CMakeFiles/junbot_gui.dir/src/main.cpp.s: cmake_force
 
 CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.o: CMakeFiles/junbot_gui.dir/flags.make
 CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.o: /home/onbat2/catkin_ws/src/junbot_gui/src/mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.o -c /home/onbat2/catkin_ws/src/junbot_gui/src/mainwindow.cpp
 
 CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.i: cmake_force
@@ -383,7 +370,7 @@ CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.s: cmake_force
 
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: CMakeFiles/junbot_gui.dir/flags.make
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /home/onbat2/catkin_ws/src/junbot_gui/src/robotinterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o -c /home/onbat2/catkin_ws/src/junbot_gui/src/robotinterface.cpp
 
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.i: cmake_force
@@ -396,7 +383,7 @@ CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.s: cmake_force
 
 CMakeFiles/junbot_gui.dir/qrc_resources.cpp.o: CMakeFiles/junbot_gui.dir/flags.make
 CMakeFiles/junbot_gui.dir/qrc_resources.cpp.o: qrc_resources.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/junbot_gui.dir/qrc_resources.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/junbot_gui.dir/qrc_resources.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/junbot_gui.dir/qrc_resources.cpp.o -c /home/onbat2/catkin_ws/build/junbot_gui/qrc_resources.cpp
 
 CMakeFiles/junbot_gui.dir/qrc_resources.cpp.i: cmake_force
@@ -417,7 +404,6 @@ junbot_gui_OBJECTS = \
 "CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o" \
 "CMakeFiles/junbot_gui.dir/src/QNode.cpp.o" \
 "CMakeFiles/junbot_gui.dir/src/QRobotItem.cpp.o" \
-"CMakeFiles/junbot_gui.dir/src/m_window.cpp.o" \
 "CMakeFiles/junbot_gui.dir/src/main.cpp.o" \
 "CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.o" \
 "CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o" \
@@ -434,7 +420,6 @@ junbot_gui_EXTERNAL_OBJECTS =
 /home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui: CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o
 /home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui: CMakeFiles/junbot_gui.dir/src/QNode.cpp.o
 /home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui: CMakeFiles/junbot_gui.dir/src/QRobotItem.cpp.o
-/home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui: CMakeFiles/junbot_gui.dir/src/m_window.cpp.o
 /home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui: CMakeFiles/junbot_gui.dir/src/main.cpp.o
 /home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui: CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.o
 /home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui: CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o
@@ -574,7 +559,7 @@ junbot_gui_EXTERNAL_OBJECTS =
 /home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.2.0
 /home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.2.0
 /home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui: CMakeFiles/junbot_gui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable /home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable /home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/junbot_gui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

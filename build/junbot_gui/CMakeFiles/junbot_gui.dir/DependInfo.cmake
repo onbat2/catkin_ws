@@ -13,7 +13,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/onbat2/catkin_ws/src/junbot_gui/src/QLoginWidget.cpp" "/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o"
   "/home/onbat2/catkin_ws/src/junbot_gui/src/QNode.cpp" "/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles/junbot_gui.dir/src/QNode.cpp.o"
   "/home/onbat2/catkin_ws/src/junbot_gui/src/QRobotItem.cpp" "/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles/junbot_gui.dir/src/QRobotItem.cpp.o"
-  "/home/onbat2/catkin_ws/src/junbot_gui/src/m_window.cpp" "/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles/junbot_gui.dir/src/m_window.cpp.o"
   "/home/onbat2/catkin_ws/src/junbot_gui/src/main.cpp" "/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles/junbot_gui.dir/src/main.cpp.o"
   "/home/onbat2/catkin_ws/src/junbot_gui/src/mainwindow.cpp" "/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.o"
   "/home/onbat2/catkin_ws/src/junbot_gui/src/robotinterface.cpp" "/home/onbat2/catkin_ws/build/junbot_gui/CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o"

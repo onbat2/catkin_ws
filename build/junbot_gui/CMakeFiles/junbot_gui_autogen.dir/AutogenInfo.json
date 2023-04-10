@@ -53,11 +53,6 @@
 			"6YEA5652QU/moc_QRobotUltis.cpp"
 		],
 		[
-			"/home/onbat2/catkin_ws/src/junbot_gui/include/m_window.h",
-			"Mu",
-			"6YEA5652QU/moc_m_window.cpp"
-		],
-		[
 			"/home/onbat2/catkin_ws/src/junbot_gui/include/mainwindow.h",
 			"Mu",
 			"6YEA5652QU/moc_mainwindow.cpp"
@@ -142,7 +137,6 @@
 		[ "/home/onbat2/catkin_ws/src/junbot_gui/src/QLoginWidget.cpp", "Mu" ],
 		[ "/home/onbat2/catkin_ws/src/junbot_gui/src/QNode.cpp", "Mu" ],
 		[ "/home/onbat2/catkin_ws/src/junbot_gui/src/QRobotItem.cpp", "Mu" ],
-		[ "/home/onbat2/catkin_ws/src/junbot_gui/src/m_window.cpp", "Mu" ],
 		[ "/home/onbat2/catkin_ws/src/junbot_gui/src/main.cpp", "Mu" ],
 		[ "/home/onbat2/catkin_ws/src/junbot_gui/src/mainwindow.cpp", "Mu" ],
 		[ "/home/onbat2/catkin_ws/src/junbot_gui/src/robotinterface.cpp", "Mu" ]

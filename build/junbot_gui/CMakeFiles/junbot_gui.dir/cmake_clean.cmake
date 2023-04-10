@@ -13,7 +13,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o"
   "CMakeFiles/junbot_gui.dir/src/QNode.cpp.o"
   "CMakeFiles/junbot_gui.dir/src/QRobotItem.cpp.o"
-  "CMakeFiles/junbot_gui.dir/src/m_window.cpp.o"
   "CMakeFiles/junbot_gui.dir/src/main.cpp.o"
   "CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.o"
   "CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o"

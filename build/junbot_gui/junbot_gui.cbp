@@ -954,9 +954,6 @@
 		<Unit filename="/home/onbat2/catkin_ws/src/junbot_gui/include/QRobotUltis.h">
 			<Option target="junbot_gui"/>
 		</Unit>
-		<Unit filename="/home/onbat2/catkin_ws/src/junbot_gui/include/m_window.h">
-			<Option target="junbot_gui"/>
-		</Unit>
 		<Unit filename="/home/onbat2/catkin_ws/src/junbot_gui/include/mainwindow.h">
 			<Option target="junbot_gui"/>
 		</Unit>
@@ -985,9 +982,6 @@
 			<Option target="junbot_gui"/>
 		</Unit>
 		<Unit filename="/home/onbat2/catkin_ws/src/junbot_gui/src/QRobotItem.cpp">
-			<Option target="junbot_gui"/>
-		</Unit>
-		<Unit filename="/home/onbat2/catkin_ws/src/junbot_gui/src/m_window.cpp">
 			<Option target="junbot_gui"/>
 		</Unit>
 		<Unit filename="/home/onbat2/catkin_ws/src/junbot_gui/src/main.cpp">

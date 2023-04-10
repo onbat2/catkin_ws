@@ -2,6 +2,12 @@
 #define ROBOTINTERFACE_H
 
 #include <QMainWindow>
+#include <sensor_msgs/BatteryState.h>
+
+#include "QRobotUltis.h"
+#include "QRobotItem.h"
+#include "QJoyStick.h"
+#include "QNode.h"
 
 namespace Ui {
 class RobotInterface;
@@ -12,11 +18,53 @@ class RobotInterface : public QMainWindow
   Q_OBJECT
 
 public:
-  explicit RobotInterface(QWidget *parent = nullptr);
+  RobotInterface(int argc, char** argv, QWidget *parent = nullptr);
   ~RobotInterface();
+
+  void readSettings();   // Load up qt program settings at startup
+  void writeSettings();  // Save qt program settings when closing
+
+  void initUis();
+  void initVideos();
+  void initTopicList();
+  void initOthers();
+  bool connectMaster(QString master_ip, QString ros_ip, bool use_envirment = false);
+
+public slots:
+  /******************************************
+     ** Auto-connections (connectSlotsByName())
+     *******************************************/
+  void on_actionAbout_triggered();
+  void slot_batteryState(sensor_msgs::BatteryState);
+  void slot_rosShutdown();
+  void refreshTopicList();
+  void slot_cmd_control();
+
+private:
+  void mousePressEvent(QMouseEvent *event);
+  void mouseMoveEvent(QMouseEvent *event);
+  void mouseReleaseEvent(QMouseEvent *event);
+  void connections();
+  void display_rviz();
 
 private:
   Ui::RobotInterface *ui;
+  bool isPressedWidget;
+  QPoint m_lastPos;
+  QNode m_qnode;
+
+  bool m_useEnviorment = false;
+  bool m_autoConnect = false;
+  AppEnums::QDisplayMode m_showMode;
+  QString m_masterUrl;
+  QString m_hostUrl;
+  double m_turnLightThre = 0.1;
+  QGraphicsScene *m_qgraphicsScene = nullptr;
+  QRobotItem *m_roboItem = nullptr;
+
+  QTimer *m_timerChart;
+  QTimer *m_timerPubImageMap;
+  QTimer *m_timerCurrentTime;
 };
 
 #endif // ROBOTINTERFACE_H

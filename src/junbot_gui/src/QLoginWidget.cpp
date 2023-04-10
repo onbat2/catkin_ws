@@ -331,7 +331,7 @@ void QLoginWidget::ConnectMaster() {
   int argc;
   char **argv;
 
-  robotInterface = new RobotInterface();
+  robotInterface = new RobotInterface(argc, argv);
 
   this -> hide();
   robotInterface -> show();

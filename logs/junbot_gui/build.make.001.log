@@ -1,6 +1,0 @@
-[  5%] [34m[1mAutomatic MOC for target junbot_gui[0m
-[  5%] Built target junbot_gui_autogen
-[35m[1mScanning dependencies of target junbot_gui[0m
-[ 10%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o[0m
-[ 15%] [32m[1mLinking CXX executable /home/onbat2/catkin_ws/devel/lib/junbot_gui/junbot_gui[0m
-[100%] Built target junbot_gui
