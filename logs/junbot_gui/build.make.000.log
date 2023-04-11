@@ -2,26 +2,26 @@
 [  5%] [34m[1mAutomatic MOC for target junbot_gui[0m
 AutoMoc: /home/onbat2/catkin_ws/src/junbot_gui/include/QRobotItem.h:97: Warning: Class QRobotItem implements the interface QGraphicsItem but does not list it in Q_INTERFACES. qobject_cast to QGraphicsItem will not work!
 [  5%] Built target junbot_gui_autogen
-[ 11%] [34m[1mGenerating qrc_resources.cpp[0m
-[ 27%] [34m[1mGenerating ui_robotinterface.h[0m
-[ 27%] [34m[1mGenerating ui_mainwindow.h[0m
+[ 11%] [34m[1mGenerating ui_mainwindow.h[0m
+[ 16%] [34m[1mGenerating qrc_resources.cpp[0m
+[ 22%] [34m[1mGenerating ui_robotinterface.h[0m
 [ 27%] [34m[1mGenerating ui_loginwidget.h[0m
 /home/onbat2/catkin_ws/src/junbot_gui/ui/loginwidget.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget1'.
 /home/onbat2/catkin_ws/src/junbot_gui/ui/loginwidget.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget2'.
 /home/onbat2/catkin_ws/src/junbot_gui/ui/loginwidget.ui: Warning: The name 'layoutWidget' (QWidget) is already in use, defaulting to 'layoutWidget3'.
 [35m[1mScanning dependencies of target junbot_gui[0m
 [ 33%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/junbot_gui_autogen/mocs_compilation.cpp.o[0m
-[ 38%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QAppConfig.cpp.o[0m
-[ 55%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QCustomWidget.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QCustomWidget.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QAppConfig.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QJoyStick.cpp.o[0m
 [ 55%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QDashBoard.cpp.o[0m
-[ 55%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QJoyStick.cpp.o[0m
-[ 66%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o[0m
 [ 66%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QNode.cpp.o[0m
-[ 72%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QRobotItem.cpp.o[0m
-[ 77%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/main.cpp.o[0m
-[ 83%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.o[0m
-[ 88%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/main.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/mainwindow.cpp.o[0m
+[ 94%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o[0m
 [ 94%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/qrc_resources.cpp.o[0m
+[ 94%] [32mBuilding CXX object CMakeFiles/junbot_gui.dir/src/QRobotItem.cpp.o[0m
 [01m[K/home/onbat2/catkin_ws/src/junbot_gui/src/QAppConfig.cpp:[m[K In static member function ‘[01m[Kstatic bool QAppConfig::getBool(const string&)[m[K’:
 [01m[K/home/onbat2/catkin_ws/src/junbot_gui/src/QAppConfig.cpp:17:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
    17 | [01;35m[K}[m[K
