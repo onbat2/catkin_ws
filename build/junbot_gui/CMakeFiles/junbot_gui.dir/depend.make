@@ -1268,7 +1268,6 @@ CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /home/onbat2/catkin_ws/src/jun
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /home/onbat2/catkin_ws/src/junbot_gui/include/QNode.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /home/onbat2/catkin_ws/src/junbot_gui/include/QRobotItem.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /home/onbat2/catkin_ws/src/junbot_gui/include/QRobotUltis.h
-CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /home/onbat2/catkin_ws/src/junbot_gui/include/mainwindow.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /home/onbat2/catkin_ws/src/junbot_gui/include/robotinterface.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /home/onbat2/catkin_ws/src/junbot_gui/src/QLoginWidget.cpp
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /opt/ros/noetic/include/actionlib/action_definition.h
@@ -1599,9 +1598,7 @@ CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QMutex
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
-CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QProcess
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QPropertyAnimation
-CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QQueue
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QSettings
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QSizeF
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList
@@ -1812,7 +1809,6 @@ CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/QPaintEvent
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/QPolygon
-CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/QStandardItemModel
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
@@ -1842,7 +1838,6 @@ CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h
-CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qstandarditemmodel.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h
@@ -1854,10 +1849,6 @@ CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
-CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtMultimedia/QSoundEffect
-CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtMultimedia/qsoundeffect.h
-CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtMultimedia/qtmultimedia-config.h
-CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtMultimedia/qtmultimediaglobal.h
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QHostAddress
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtNetwork/QNetworkInterface
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qabstractsocket.h
@@ -1869,7 +1860,6 @@ CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCompleter
-CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDesktopWidget
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFrame
 CMakeFiles/junbot_gui.dir/src/QLoginWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsItem
@@ -4729,6 +4719,7 @@ CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gn
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar
+CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QProgressBar
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTreeWidgetItem
@@ -4757,6 +4748,7 @@ CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gn
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h
+CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qprogressbar.h
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h
 CMakeFiles/junbot_gui.dir/src/robotinterface.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h

@@ -30,6 +30,9 @@ public:
   void readSettings();   // Load up qt program settings at startup
   void writeSettings();  // Save qt program settings when closing
 
+  void closeEvent(QCloseEvent *event);  // Overloaded function
+//  void showNoMasterMessage();
+
   void initUis();
 //  void initVideos();
 //  void initTopicList();

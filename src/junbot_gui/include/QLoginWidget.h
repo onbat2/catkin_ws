@@ -8,7 +8,7 @@
 #include <QSpinBox>
 
 #include "QCustomWidget.h"
-#include "mainwindow.h"
+//#include "mainwindow.h"
 
 #include "robotinterface.h"
 
@@ -47,8 +47,8 @@ private slots:
 private:
   Ui::LoginWidget* ui;
   bool m_bConnected;
-  MainWindow* mainWindow = NULL;
-  RobotInterface* robotInterface;
+//  MainWindow* mainWindow = NULL;
+  RobotInterface* robotInterface = NULL;
   QString m_qRosIp;
   QString m_qMasterIp;
   QComboBox* fixed_box;

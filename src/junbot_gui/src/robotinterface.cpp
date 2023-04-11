@@ -55,6 +55,12 @@ void RobotInterface::writeSettings()
   windows_setting.setValue("WindowGeometry/height", this->height());
 }
 
+void RobotInterface::closeEvent(QCloseEvent *event)
+{
+  writeSettings();
+  QMainWindow::closeEvent(event);
+}
+
 void RobotInterface::initUis()
 {
   // Time dynamic display
@@ -72,5 +78,5 @@ void RobotInterface::initUis()
 
   m_qgraphicsScene->addItem(m_roboItem);
 
-  ui->mapViz->setScene(m_qgraphicsScene);
+  ui->mapView->setScene(m_qgraphicsScene);
 }

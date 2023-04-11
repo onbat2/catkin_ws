@@ -189,8 +189,6 @@ QSpinBox
 -
 QCustomWidget.h
 /home/onbat2/catkin_ws/src/junbot_gui/include/QCustomWidget.h
-mainwindow.h
-/home/onbat2/catkin_ws/src/junbot_gui/include/mainwindow.h
 robotinterface.h
 /home/onbat2/catkin_ws/src/junbot_gui/include/robotinterface.h
 
@@ -8614,6 +8612,8 @@ QtWidgets/QLabel
 QtWidgets/QMainWindow
 -
 QtWidgets/QMenuBar
+-
+QtWidgets/QProgressBar
 -
 QtWidgets/QPushButton
 -
