@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 10.0.0, 2023-04-11T12:52:48. -->
+<!-- Written by QtCreator 10.0.0, 2023-04-12T09:28:44. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -147,7 +147,7 @@
      <value type="QString">ROS_PYTHON_VERSION=3</value>
      <value type="QString">ROS_ROOT=/opt/ros/noetic/share/ros</value>
      <value type="QString">ROS_VERSION=1</value>
-     <value type="QString">SHLVL=53</value>
+     <value type="QString">SHLVL=2</value>
      <value type="QString">TERM=xterm</value>
      <value type="QString">_=/usr/bin/env</value>
     </valuelist>
