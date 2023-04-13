@@ -1,0 +1,19 @@
+10/04/2023
+*Problem
+  -(QLoginWidget) Phần Login khi bấm connect không tự tắt (Done)
+*Target
+  -(QLoginWidget) Tinh chỉnh lại phần Login
+  - Code lại phần robotinterface
+*Process
+
+11/04/2023
+*Problem
+  - Xóa toàn bộ những gì liên quan tới mainWindow trong các class QLoginWidget, QNode, QRobotItem, QRobotUtil.
+  - Clear code để những class trên build được với nhau
+*Process
+  - Đã tinh chỉnh xong ở QLoginWidget
+  - Đã thêm giao diện cho các nút Button
+  
+13/03/2023
+*Target: 
+  - Chỉnh lại các function trong class robotinterface.h và robotinterface.cpp
