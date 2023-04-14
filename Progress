@@ -8,7 +8,7 @@
 
 11/04/2023
 *Problem
-  - Xóa toàn bộ những gì liên quan tới mainWindow trong các class QLoginWidget, QNode, QRobotItem, QRobotUtil.
+  - Comment những gì liên quan tới mainWindow trong các class QLoginWidget, QNode, QRobotItem, QRobotUtil.
   - Clear code để những class trên build được với nhau
 *Process
   - Đã tinh chỉnh xong ở QLoginWidget
@@ -17,3 +17,7 @@
 13/03/2023
 *Target: 
   - Chỉnh lại các function trong class robotinterface.h và robotinterface.cpp
+  
+14/04/2023
+*Target
+  - Xóa các class và function không cần thiết trong code

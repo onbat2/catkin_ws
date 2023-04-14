@@ -9,6 +9,7 @@
 #include <QTimer>
 #include <QTreeWidgetItem>
 #include <QPushButton>
+#include <QMessageBox>
 
 #include "QRobotUltis.h"
 #include "QRobotItem.h"
@@ -31,68 +32,29 @@ public:
   void writeSettings();  // Save qt program settings when closing
 
   void closeEvent(QCloseEvent *event);  // Overloaded function
-//  void showNoMasterMessage();
+  void showNoMasterMessage(); // what's this mean ?
 
   void initUis();
-//  void initVideos();
-//  void initTopicList();
-  void initOthers();
-  bool connectMaster(QString master_ip, QString ros_ip, bool use_envirment = false);
+  bool connectMaster(QString master_ip, QString ros_ip);
 
 public slots:
   /******************************************
      ** Auto-connections (connectSlotsByName())
      *******************************************/
-//  void on_actionAbout_triggered();
   void slot_batteryState(sensor_msgs::BatteryState);
-//  void slot_rosShutdown();
-//  void refreshTopicList();
+  void slot_rosShutdown();
   void slot_cmd_control();
 
-  /******************************************
-    ** Manual connections
-    *******************************************/
-//  void updateLoggingView();  // no idea why this can't connect automatically
-//  void Slider_raw_valueChanged(int v);
-//  void Slider_linear_valueChanged(int value);
-//  void slot_set_2D_Goal();
-//  void slot_set_2D_Pos();
-//  void slot_set_select();
-//  void slot_move_camera_btn();
+  // display image
+  void slot_dis_connect();
+  void slot_updateRobotStatus(AppEnums::QRobotStatus);
 
-//  // Set interface
-//  void slot_setting_frame();
-//  void slot_set_mutil_goal_btn();
-
-//  // return flight
-//  void slot_return_point();
-
-//  // Robot position
-//  void slot_position_change(QString, double, double, double, double);
-
-//  // display image
-//  void slot_show_image(int, QImage);
-//  void slot_dis_connect();
-//  void slot_hide_table_widget();
-//  void slot_closeWindows();
-//  void slot_minWindows();
-//  void slot_maxWindows();
-//  void slot_pubImageMapTimeOut();
-//  void slot_updateCursorPos(QPointF pos);
-//  void slot_changeMapType(int);
-//  void slot_updateRobotStatus(AppEnums::QRobotStatus);
-//  //  void on_horizontalSlider_raw_valueChanged(int value);
-
-//signals:
-//  void signalSet2DPose();
-//  void signalSet2DGoal();
-//  void signalSetMoveCamera();
-//  void signalDisconnect();
+signals:
+  void signalDisconnect();
 
 private:
   void connections();
-//  void display_rviz();
-//  void setCurrentMenu(QPushButton *btn);
+  void display_rviz();
 
 private:
   Ui::RobotInterface *ui;

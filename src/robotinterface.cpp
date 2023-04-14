@@ -12,8 +12,6 @@ RobotInterface::RobotInterface(int argc, char **argv, QWidget *parent)
   readSettings();
   initUis();
 
-//  ui->view_logging->setModel(m_qnode.loggingModel());
-
   // Setting signal and slot
   connections();
 }
@@ -61,6 +59,14 @@ void RobotInterface::closeEvent(QCloseEvent *event)
   QMainWindow::closeEvent(event);
 }
 
+void RobotInterface::showNoMasterMessage()
+{
+  QMessageBox msgBox;
+  msgBox.setText("Couldn't find the ros master.");
+  msgBox.exec();
+  close();
+}
+
 void RobotInterface::initUis()
 {
   // Time dynamic display
@@ -76,95 +82,23 @@ void RobotInterface::initUis()
 
   m_roboItem = new QRobotItem();
 
-  m_qgraphicsScene->addItem(m_roboItem);
+//  m_qgraphicsScene->addItem(m_roboItem);
 
-  ui->mapView->setScene(m_qgraphicsScene);
+  ui->mapViz->setScene(m_qgraphicsScene);
 
   //need more ?
 }
 
-//// Video topic init
-//void RobotInterface::initVideos()
-//{
-//  QSettings video_topic_setting("junbot_gui", "settings");
-//  QStringList names = video_topic_setting.value("video/names").toStringList();
-//  QStringList topics = video_topic_setting.value("video/topics").toStringList();
-//  if (topics.size() == 4) {
-//    if (topics[0] != "")
-//    {
-//      m_qnode.Sub_Image(topics[0], 0);
-//    }
-//    if (topics[1] != "")
-//    {
-//      m_qnode.Sub_Image(topics[1], 1);
-//    }
-//    if (topics[2] != "")
-//    {
-//      m_qnode.Sub_Image(topics[2], 2);
-//    }
-//    if (topics[3] != "")
-//    {
-//      m_qnode.Sub_Image(topics[3], 3);
-//    }
-//  }
-
-//  connect(&m_qnode, &QNode::Show_image, this,
-//          &MainWindow::slot_show_image);
-//}
-
-//// Read and display topic list
-//void RobotInterface::initTopicList()
-//{
-//  ui->topic_listWidget->clear();
-//  ui->topic_listWidget->addItem(QString("%1   (%2)").arg("Name", "Type"));
-//  QMap<QString, QString> topic_list = m_qnode.get_topic_list();
-//  for (QMap<QString, QString>::iterator iter = topic_list.begin();
-//       iter != topic_list.end(); iter++) {
-//    ui->topic_listWidget->addItem(
-//          QString("%1   (%2)").arg(iter.key(), iter.value()));
-//  }
-//}
-
-// Other setting
-void RobotInterface::initOthers()
+bool RobotInterface::connectMaster(QString master_ip, QString ros_ip)
 {
-  m_timerChart = new QTimer;
-  m_timerPubImageMap = new QTimer;
-  m_timerPubImageMap->setInterval(100);
-  m_timerChart->setInterval(100);
-
-  connect(m_timerPubImageMap, SIGNAL(timeout()), this,
-          SLOT(slot_pubImageMapTimeOut()));
-
-  m_timerPubImageMap->start();
-  m_timerChart->start();
-}
-
-bool RobotInterface::connectMaster(QString master_ip, QString ros_ip, bool use_envirment)
-{
-
   CONSOLE << "Connect ?";
 
-  if (use_envirment) {
-    if (!m_qnode.init()) {
-      return false;
+  if (!m_qnode.init(master_ip.toStdString(), ros_ip.toStdString())) {
+    return false;
     } else {
-//      initVideos();
-//      initTopicList();
-      initOthers();
-    }
+    readSettings();
+    return true;
   }
-  else {
-    if (!m_qnode.init(master_ip.toStdString(), ros_ip.toStdString())) {
-      return false;
-    } else {
-//      initVideos();
-//      initTopicList();
-      initOthers();
-    }
-  }
-  readSettings();
-  return true;
 }
 
 void RobotInterface::slot_batteryState(sensor_msgs::BatteryState msg)
@@ -183,6 +117,11 @@ void RobotInterface::slot_batteryState(sensor_msgs::BatteryState msg)
           "QProgressBar {border: 2px solid grey;border-radius: 5px;text-align: "
           "center;}");
   }
+}
+
+void RobotInterface::slot_rosShutdown()
+{
+  slot_updateRobotStatus(AppEnums::QRobotStatus::None);
 }
 
 void RobotInterface::slot_cmd_control()
@@ -220,61 +159,63 @@ void RobotInterface::slot_cmd_control()
   }
 }
 
+void RobotInterface::slot_dis_connect()
+{
+  ros::shutdown();
+  slot_rosShutdown();
+  emit signalDisconnect();
+  this->close();
+}
+
+void RobotInterface::slot_updateRobotStatus(AppEnums::QRobotStatus status)
+{
+  switch (status) {
+  case AppEnums::QRobotStatus::None: {
+    QTimer::singleShot(100, [this]() {
+      ui->pushButton_status->setIcon(
+            QIcon(":/image/data/images/status/status_none.png"));
+      m_roboItem->setRobotColor(AppEnums::QRobotColor::Blue);
+    });
+  } break;
+  case AppEnums::QRobotStatus::Normal: {
+    QTimer::singleShot(200, [this]() {
+      ui->pushButton_status->setIcon(
+            QIcon(":/image/data/images/status/status_normal.png"));
+      m_roboItem->setRobotColor(AppEnums::QRobotColor::Blue);
+    });
+  } break;
+  case AppEnums::QRobotStatus::Error: {
+    QTimer::singleShot(300, [this]() {
+      ui->pushButton_status->setIcon(
+            QIcon(":/image/data/images/status/status_error.png"));
+      m_roboItem->setRobotColor(AppEnums::QRobotColor::Red);
+    });
+  } break;
+  case AppEnums::QRobotStatus::Warning: {
+    QTimer::singleShot(400, [this]() {
+      ui->pushButton_status->setIcon(
+            QIcon(":/image/data/images/status/status_warn.png"));
+      m_roboItem->setRobotColor(AppEnums::QRobotColor::Yellow);
+    });
+  } break;
+  }
+}
+
 void RobotInterface::connections()
 {
-//  connect(&m_qnode, &QNode::loggingUpdated, this, &RobotInterface::updateLoggingView);
-//  connect(&m_qnode, &QNode::rosShutdown, this, &RobotInterface::slot_rosShutdown);
-//  connect(&m_qnode, &QNode::Master_shutdown, this, &RobotInterface::slot_rosShutdown);
-
-  // Main display screen
-
-//  // Control screen
-//  connect(ui->btn_control, &QPushButton::clicked, [=]() {
-//    ui->stackedWidget_left->setCurrentIndex(1);
-//    setCurrentMenu(ui->btn_control);
-//  });
-
-//  // Status screen
-//  connect(ui->btn_status, &QPushButton::clicked, [=]() {
-//    ui->stackedWidget_left->setCurrentIndex(0);
-//    setCurrentMenu(ui->btn_status);
-//  });
-
-//  // Map screen
-//  connect(ui->btn_map, &QPushButton::clicked, [=]() {
-//    ui->stackedWidget_main->setCurrentIndex(0);
-//    setCurrentMenu(ui->btn_map);
-//  });
-
-//  // Other screen
-//  connect(ui->btn_other, &QPushButton::clicked, [=]() {
-//    ui->stackedWidget_main->setCurrentIndex(1);
-//    setCurrentMenu(ui->btn_other);
-//  });
-
-//  connect(ui->pushButton_status, &QPushButton::clicked, [=]() {
-//    ui->btn_other->click();
-//  });
+  connect(&m_qnode, &QNode::rosShutdown, this, &RobotInterface::slot_rosShutdown);
+  connect(&m_qnode, &QNode::Master_shutdown, this, &RobotInterface::slot_rosShutdown);
 
   connect(m_timerCurrentTime, &QTimer::timeout, [=]() {
     ui->label_time->setText(
           QDateTime::currentDateTime().toString("  hh:mm:ss  "));
   });
 
-//  // Robot status
-//  connect(&m_qnode, &QNode::updateRobotStatus, this, &RobotInterface::slot_updateRobotStatus);
+  // Robot status
+  connect(&m_qnode, &QNode::updateRobotStatus, this, &RobotInterface::slot_updateRobotStatus);
 
-//  // Robot battery
-//  connect(&m_qnode, &QNode::batteryState, this, &RobotInterface::slot_batteryState);
-
-//  // Function to bind slider
-//  connect(ui->horizontalSlider_raw, SIGNAL(valueChanged(int)), this,
-//          SLOT(Slider_raw_valueChanged(int)));
-//  connect(ui->horizontalSlider_linear, SIGNAL(valueChanged(int)), this,
-//          SLOT(Slider_linear_valueChanged(int)));
-
-//  // Set interface
-//  connect(ui->settings_btn, SIGNAL(clicked()), this, SLOT(slot_setting_frame()));
+  // Robot battery
+  connect(&m_qnode, &QNode::batteryState, this, &RobotInterface::slot_batteryState);
 
   // Bind the speed control buttons
   connect(ui->back, SIGNAL(clicked()), this, SLOT(slot_cmd_control()));
@@ -283,43 +224,49 @@ void RobotInterface::connections()
   connect(ui->forward, SIGNAL(clicked()), this, SLOT(slot_cmd_control()));
   connect(ui->r_right, SIGNAL(clicked()), this, SLOT(slot_cmd_control()));
 
+}
 
-//  connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(slot_dis_connect()));
-//  connect(ui->set_pos_btn, SIGNAL(clicked()), this, SLOT(slot_set_2D_Pos()));
-//  connect(ui->set_goal_btn, SIGNAL(clicked()), this, SLOT(slot_set_2D_Goal()));
+void RobotInterface::display_rviz()
+{
+  QSettings settings("junbot_gui", "Displays");
+  bool Grid_enable = settings.value("Grid/enable", bool(true)).toBool();
+  double Grid_count = settings.value("Grid/count", double(20)).toDouble();
 
-//  // return flight
-//  connect(ui->return_btn, SIGNAL(clicked()), this, SLOT(slot_return_point()));
+  bool Map_enable = settings.value("Map/enable", bool(true)).toBool();
+  QString Map_topic = settings.value("Map/topic", QString("/map")).toString();
+  double Map_alpha = settings.value("Map/alpha", double(0.7)).toDouble();
+  QString Map_scheme = settings.value("Map/scheme", QString("map")).toString();
+  bool Laser_enable = settings.value("Laser/enable", bool(true)).toBool();
+  QString Laser_topic =
+      settings.value("Laser/topic", QString("/scan")).toString();
+  bool Polygon_enable = settings.value("Polygon/enable", bool(true)).toBool();
+  QString Polygon_topic =
+      settings
+      .value("Polygon/topic", QString("/move_base/local_costmap/footprint"))
+      .toString();
 
-//  // refresh thread list
-//  connect(ui->refresh_topic_btn, SIGNAL(clicked()), this,
-//          SLOT(refreshTopicList()));
-
-//  connect(ui->close_btn, SIGNAL(clicked()), this, SLOT(slot_closeWindows()));
-//  connect(ui->min_btn, SIGNAL(clicked()), this, SLOT(slot_minWindows()));
-//  connect(ui->max_btn, SIGNAL(clicked()), this, SLOT(slot_maxWindows()));
-
-//  // Map and Path display
-//  connect(&m_qnode, SIGNAL(updateMap(QImage)), m_roboItem,
-//          SLOT(paintMaps(QImage)));
-//  connect(&m_qnode, SIGNAL(plannerPath(QPolygonF)), m_roboItem,
-//          SLOT(paintPlannerPath(QPolygonF)));
-//  connect(&m_qnode, SIGNAL(updateRoboPose(QRobotPose)), m_roboItem,
-//          SLOT(paintRoboPos(QRobotPose)));
-//  connect(&m_qnode, SIGNAL(updateLaserScan(QPolygonF)), m_roboItem,
-//          SLOT(paintLaserScan(QPolygonF)));
-//  connect(m_roboItem, SIGNAL(cursorPos(QPointF)), this,
-//          SLOT(slot_updateCursorPos(QPointF)));
-
-//  // map
-//  connect(m_roboItem, SIGNAL(signalPub2DPos(QRobotPose)), &m_qnode,
-//          SLOT(slot_pub2DPos(QRobotPose)));
-//  connect(m_roboItem, SIGNAL(signalPub2DGoal(QRobotPose)), &m_qnode,
-//          SLOT(slot_pub2DGoal(QRobotPose)));
-//  connect(this, SIGNAL(signalSet2DPose()), m_roboItem, SLOT(slot_set2DPos()));
-//  connect(this, SIGNAL(signalSet2DGoal()), m_roboItem, SLOT(slot_set2DGoal()));
-//  connect(this, SIGNAL(signalSetMoveCamera()), m_roboItem,
-//          SLOT(slot_setMoveCamera()));
-//  //    connect(ui.stackedWidget_2,SIGNAL())
+  bool RobotModel_enable =
+      settings.value("RobotModel/enable", bool(true)).toBool();
+  bool Navigation_enable =
+      settings.value("Navigation/enable", bool(true)).toBool();
+  QString GlobalMap_topic =
+      settings
+      .value("Navigation/GlobalMap/topic",
+             QString("/move_base/global_costmap/costmap"))
+      .toString();
+  QString GlobalMap_paln = settings
+      .value("Navigation/GlobalPlan/topic",
+             QString("/move_base/NavfnROS/plan"))
+      .toString();
+  QString LocalMap_topic =
+      settings
+      .value("Navigation/LocalMap/topic",
+             QString("/move_base/local_costmap/costmap"))
+      .toString();
+  QString LocalMap_plan =
+      settings
+      .value("Navigation/LocalPlan/topic",
+             QString("/move_base/DWAPlannerROS/local_plan"))
+      .toString();
 }
 
