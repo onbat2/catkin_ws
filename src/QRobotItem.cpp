@@ -74,14 +74,6 @@ void QRobotItem::paintMaps(QImage map)
     update();
 }
 
-void QRobotItem::paintRoboPos(QRobotPose pos)
-{
-    //  qDebug()<<"pos:"<<pos.x<<" "<<pos.y<<" "<<pos.theta;
-    RoboPostion = QPointF(pos.x, pos.y);
-    m_roboYaw = pos.theta;
-    update();
-}
-
 void QRobotItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
                        QWidget *widget)
 {
@@ -256,71 +248,8 @@ void QRobotItem::slot_setMoveCamera()
     this->setCursor(*moveCursor);
     currCursor = moveCursor;
 }
-void QRobotItem::mousePressEvent(QGraphicsSceneMouseEvent *event)
-{
-    if (event->button() == Qt::LeftButton) {
-        if (currCursor != moveCursor) {
-            m_pressedPoint = event->pos();
-        }
-        m_startPos = event->pos();
-        m_isPress = true;
-    } else if (event->button() == Qt::RightButton) {
-        // ResetItemPos();
-    }
-    update();
-}
 
-void QRobotItem::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
-{
-    m_pressingPoint = event->pos();
 
-    if (currCursor == NULL) {
-        this->setCursor(*moveCursor);
-        currCursor = moveCursor;
-    }
-
-    if (m_isPress && currCursor == moveCursor) {
-        QPointF point = (event->pos() - m_startPos) * m_scaleValue;
-        moveBy(point.x(), point.y());
-    }
-    update();
-}
-
-void QRobotItem::hoverMoveEvent(QGraphicsSceneHoverEvent *event)
-{
-    emit cursorPos(event->pos());
-}
-
-void QRobotItem::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
-{
-    m_isPress = false;
-
-    if (currCursor == set2DPoseCursor) {
-        m_isOtherCursor = false;
-        QRobotPose target_pos;
-        target_pos.x = m_pressedPoint.x();
-        target_pos.y = m_pressedPoint.y();
-        target_pos.theta = ::getAngle(m_pressedPoint.x(), m_pressedPoint.y(),
-                                      m_pressingPoint.x(), m_pressingPoint.y());
-        emit signalPub2DPos(target_pos);
-        m_pressedPoint = QPointF(0, 0);
-        m_pressingPoint = QPointF(0, 0);
-        this->setCursor(*moveCursor);
-        currCursor = moveCursor;
-    } else if (currCursor == set2DGoalCursor) {
-        m_isOtherCursor = false;
-        QRobotPose init_pos;
-        init_pos.x = m_pressedPoint.x();
-        init_pos.y = m_pressedPoint.y();
-        init_pos.theta = ::getAngle(m_pressedPoint.x(), m_pressedPoint.y(),
-                                    m_pressingPoint.x(), m_pressingPoint.y());
-        emit signalPub2DGoal(init_pos);
-        m_pressedPoint = QPointF(0, 0);
-        m_pressingPoint = QPointF(0, 0);
-        this->setCursor(*moveCursor);
-        currCursor = moveCursor;
-    }
-}
 
 
 

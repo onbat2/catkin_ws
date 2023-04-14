@@ -183,15 +183,6 @@ padding:0;
              </color>
             </brush>
            </colorrole>
-           <colorrole role="Base">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
@@ -212,15 +203,6 @@ padding:0;
              </color>
             </brush>
            </colorrole>
-           <colorrole role="Base">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
            <colorrole role="Window">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
@@ -233,15 +215,6 @@ padding:0;
           </inactive>
           <disabled>
            <colorrole role="Button">
-            <brush brushstyle="SolidPattern">
-             <color alpha="255">
-              <red>255</red>
-              <green>255</green>
-              <blue>255</blue>
-             </color>
-            </brush>
-           </colorrole>
-           <colorrole role="Base">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
               <red>255</red>
@@ -936,7 +909,7 @@ background-color:none</string>
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
+              <width>88</width>
               <height>88</height>
              </rect>
             </property>
@@ -1285,8 +1258,8 @@ background-color:none</string>
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>385</width>
-              <height>87</height>
+              <width>579</width>
+              <height>233</height>
              </rect>
             </property>
             <attribute name="label">

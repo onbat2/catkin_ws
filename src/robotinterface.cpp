@@ -10,12 +10,12 @@ RobotInterface::RobotInterface(int argc, char **argv, QWidget *parent)
 
   // read configuration file
   readSettings();
-//  initUis();
+  initUis();
 
 //  ui->view_logging->setModel(m_qnode.loggingModel());
 
   // Setting signal and slot
-//  connections();
+  connections();
 }
 
 RobotInterface::~RobotInterface()
@@ -142,6 +142,9 @@ void RobotInterface::initOthers()
 
 bool RobotInterface::connectMaster(QString master_ip, QString ros_ip, bool use_envirment)
 {
+
+  CONSOLE << "Connect ?";
+
   if (use_envirment) {
     if (!m_qnode.init()) {
       return false;
@@ -164,7 +167,7 @@ bool RobotInterface::connectMaster(QString master_ip, QString ros_ip, bool use_e
   return true;
 }
 
-void RobotInterface::slot_batteryState(sensor_msgs::BatteryState)
+void RobotInterface::slot_batteryState(sensor_msgs::BatteryState msg)
 {
   ui->label_power->setText(QString::number(msg.voltage).mid(0, 5) + "V");
   double percentage = msg.percentage;
@@ -188,16 +191,20 @@ void RobotInterface::slot_cmd_control()
   char key = btn->text().toStdString()[0];
   QString button_key = btn->objectName();
 
-  float liner = ui->horizontalSlider_linear->value() * 0.01;
-  float turn = ui->horizontalSlider_raw->value() * 0.01;
+  float liner = 1;
+  float turn = 0.5;
   bool is_all = false;
 
   CONSOLE << "Key: " << key;
   CONSOLE << "Name: " << button_key;
 
+  CONSOLE << "nice";
+
   if(button_key == "forward"){
+    CONSOLE << "hi";
     // forward
     m_qnode.move_base(is_all ? 'I' : 'i', liner, turn);
+    CONSOLE << "hello";
   } else if(button_key == "back"){
     // backward
     m_qnode.move_base(is_all ? '<' : ',', liner, turn);
@@ -213,30 +220,9 @@ void RobotInterface::slot_cmd_control()
   }
 }
 
-void RobotInterface::mousePressEvent(QMouseEvent *event)
-{
-  m_lastPos = event->globalPos();
-  isPressedWidget = true;
-}
-
-void RobotInterface::mouseMoveEvent(QMouseEvent *event)
-{
-  if (isPressedWidget) {
-    this->move(this->x() + (event->globalX() - m_lastPos.x()),
-               this->y() + (event->globalY() - m_lastPos.y()));
-    m_lastPos = event->globalPos();
-  }
-}
-
-void RobotInterface::mouseReleaseEvent(QMouseEvent *event)
-{
-  m_lastPos = event->globalPos();
-  isPressedWidget = false;
-}
-
 void RobotInterface::connections()
 {
-  connect(&m_qnode, &QNode::loggingUpdated, this, &RobotInterface::updateLoggingView);
+//  connect(&m_qnode, &QNode::loggingUpdated, this, &RobotInterface::updateLoggingView);
 //  connect(&m_qnode, &QNode::rosShutdown, this, &RobotInterface::slot_rosShutdown);
 //  connect(&m_qnode, &QNode::Master_shutdown, this, &RobotInterface::slot_rosShutdown);
 

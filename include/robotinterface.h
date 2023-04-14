@@ -12,7 +12,7 @@
 
 #include "QRobotUltis.h"
 #include "QRobotItem.h"
-#include "QJoyStick.h"
+
 #include "QNode.h"
 
 namespace Ui {
@@ -90,9 +90,6 @@ public slots:
 //  void signalDisconnect();
 
 private:
-  void mousePressEvent(QMouseEvent *event);
-  void mouseMoveEvent(QMouseEvent *event);
-  void mouseReleaseEvent(QMouseEvent *event);
   void connections();
 //  void display_rviz();
 //  void setCurrentMenu(QPushButton *btn);
@@ -100,7 +97,6 @@ private:
 private:
   Ui::RobotInterface *ui;
   bool isPressedWidget;
-  QPoint m_lastPos;
   QNode m_qnode;
 
 //  QStandardItemModel *treeView_rviz_model = nullptr;

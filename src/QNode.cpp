@@ -50,6 +50,9 @@ bool QNode::init() {
   if (!ros::master::check()) {
     return false;
   }
+
+  CONSOLE << "Init?";
+
   ros::start();  // explicitly needed since our nodehandle is going out of
   // scope.
   SubAndPubTopic();
@@ -319,6 +322,7 @@ void QNode::move_base(char k, float speed_linear, float speed_turn) {
 
   float speed = speed_linear;
   float turn = speed_turn;
+
   // Update the Twist message
   geometry_msgs::Twist twist;
   twist.linear.x = x * speed;
@@ -331,6 +335,7 @@ void QNode::move_base(char k, float speed_linear, float speed_turn) {
 
   // Publish it and resolve any remaining callbacks
   cmd_pub.publish(twist);
+  //*bug
   ros::spinOnce();
 }
 

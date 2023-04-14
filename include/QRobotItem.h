@@ -24,10 +24,6 @@ public:
     ~QRobotItem();
     QRectF boundingRect() const;
     void wheelEvent(QGraphicsSceneWheelEvent *event);
-    void mousePressEvent(QGraphicsSceneMouseEvent *event);
-    void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
-    void mouseReleaseEvent(QGraphicsSceneMouseEvent *event);
-    void hoverMoveEvent(QGraphicsSceneHoverEvent *event);
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
                QWidget *widget);
     int QColorToInt(const QColor &color);
@@ -61,14 +57,11 @@ public:
     QCursor *set2DGoalCursor = NULL;
     QCursor *currCursor = NULL;
 
-signals:
-    void cursorPos(QPointF);
-    void signalPub2DPos(QRobotPose pose);
-    void signalPub2DGoal(QRobotPose pose);
+//signals:
+//    void cursorPos(QPointF)
 
 public slots:
     void paintMaps(QImage map);
-    void paintRoboPos(QRobotPose pos);
     void paintImage(int, QImage);
     void paintPlannerPath(QPolygonF);
     void paintLaserScan(QPolygonF);

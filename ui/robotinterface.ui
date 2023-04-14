@@ -19,8 +19,8 @@
      <rect>
       <x>10</x>
       <y>30</y>
-      <width>361</width>
-      <height>291</height>
+      <width>351</width>
+      <height>281</height>
      </rect>
     </property>
     <widget class="QWidget" name="verticalLayoutWidget">
@@ -214,7 +214,7 @@ QPushButton:pressed{border-image: url(:/image/data/images/down_2.png);}</string>
      <item>
       <widget class="QLabel" name="label_time">
        <property name="text">
-        <string>Time: </string>
+        <string>00:00:00</string>
        </property>
       </widget>
      </item>
