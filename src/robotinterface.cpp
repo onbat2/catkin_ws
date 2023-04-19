@@ -8,6 +8,9 @@ RobotInterface::RobotInterface(int argc, char **argv, QWidget *parent)
 {
   ui->setupUi(this);
 
+  ui->location_A->setStyleSheet("background-image: url(:/image/data/images/nocolor_button.png)");
+
+
   // read configuration file
   readSettings();
   initUis();
@@ -130,8 +133,8 @@ void RobotInterface::slot_cmd_control()
   char key = btn->text().toStdString()[0];
   QString button_key = btn->objectName();
 
-  float liner = 1;
-  float turn = 0.5;
+  float liner = ui->horizontalSlider_linear->value() * 0.01;
+  float turn = ui->horizontalSlider_turn->value() * 0.01;
   bool is_all = false;
 
   CONSOLE << "Key: " << key;
@@ -140,23 +143,40 @@ void RobotInterface::slot_cmd_control()
   CONSOLE << "nice";
 
   if(button_key == "forward"){
-    CONSOLE << "hi";
     // forward
     m_qnode.move_base(is_all ? 'I' : 'i', liner, turn);
-    CONSOLE << "hello";
+    CONSOLE << "my forward: " << liner;
   } else if(button_key == "back"){
     // backward
     m_qnode.move_base(is_all ? '<' : ',', liner, turn);
+    CONSOLE << "my backward: " << liner;
   } else if (button_key == "r_left") {
     // rotate left
     m_qnode.move_base(is_all ? 'J' : 'j', liner, turn);
+    CONSOLE << "left_value: ";
   } else if (button_key == "r_right") {
     // rotate right
     m_qnode.move_base(is_all ? 'L' : 'l', liner, turn);
+    CONSOLE << "right_value: ";
   } else {
     // stop
     m_qnode.move_base(is_all ? 'K' : 'k', liner, turn);
   }
+}
+
+void RobotInterface::slot_buttonChangeColorA()
+{
+//  ui->location_A->setStyleSheet("background-color: red");
+}
+
+void RobotInterface::slot_buttonChangeColorB()
+{
+  ui->location_B->setStyleSheet("background-color: yellow");
+}
+
+void RobotInterface::slot_buttonChangeColorC()
+{
+  ui->location_C->setStyleSheet("background-color: blue");
 }
 
 void RobotInterface::slot_dis_connect()
@@ -224,6 +244,9 @@ void RobotInterface::connections()
   connect(ui->forward, SIGNAL(clicked()), this, SLOT(slot_cmd_control()));
   connect(ui->r_right, SIGNAL(clicked()), this, SLOT(slot_cmd_control()));
 
+  connect(ui->location_A, SIGNAL(clicked()), this, SLOT(slot_buttonChangeColorA()));
+  connect(ui->location_B, SIGNAL(clicked()), this, SLOT(slot_buttonChangeColorB()));
+  connect(ui->location_C, SIGNAL(clicked()), this, SLOT(slot_buttonChangeColorC()));
 }
 
 void RobotInterface::display_rviz()

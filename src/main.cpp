@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "robotinterface.h"
 
 #include <QApplication>
 #include <QDesktopWidget>

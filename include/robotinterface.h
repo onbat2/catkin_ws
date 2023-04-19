@@ -10,6 +10,10 @@
 #include <QTreeWidgetItem>
 #include <QPushButton>
 #include <QMessageBox>
+#include <QSlider>
+
+#include <QImage>
+#include <QPixmap>
 
 #include "QRobotUltis.h"
 #include "QRobotItem.h"
@@ -44,6 +48,9 @@ public slots:
   void slot_batteryState(sensor_msgs::BatteryState);
   void slot_rosShutdown();
   void slot_cmd_control();
+  void slot_buttonChangeColorA();
+  void slot_buttonChangeColorB();
+  void slot_buttonChangeColorC();
 
   // display image
   void slot_dis_connect();
