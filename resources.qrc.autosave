@@ -168,13 +168,5 @@
         <file>data/background/background.gif</file>
         <file>data/background/test.jpg</file>
     </qresource>
-    <qresource prefix="/duke_img">
-        <file>data/duke_img/turnRight_icon.ico</file>
-        <file>data/duke_img/back_icon.ico</file>
-        <file>data/duke_img/stopButton_icon.ico</file>
-        <file>data/duke_img/forward_icon.ico</file>
-        <file>data/duke_img/turnLeft_icon.ico</file>
-        <file>data/duke_img/game_map.png</file>
-        <file>data/duke_img/map_game_2.png</file>
-    </qresource>
+    <qresource prefix="/duke_img"/>
 </RCC>

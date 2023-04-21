@@ -79,15 +79,15 @@ void RobotInterface::initUis()
   // ui.centralwidget->hide();
 
   // view scene loading
-  m_qgraphicsScene = new QGraphicsScene();
+//  m_qgraphicsScene = new QGraphicsScene();
 
-  m_qgraphicsScene->clear();
+//  m_qgraphicsScene->clear();
 
   m_roboItem = new QRobotItem();
 
 //  m_qgraphicsScene->addItem(m_roboItem);
 
-  ui->mapViz->setScene(m_qgraphicsScene);
+//  ui->mapViz->setScene(m_qgraphicsScene);
 
   //need more ?
 }
